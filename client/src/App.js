@@ -6,6 +6,7 @@ import SendMoney from './pages/SendMoney';
 import Conversion from './pages/Conversion';
 import ConfirmTransfer from './pages/ConfirmTransfer';
 import TransactionStatus from './pages/TransactionStatus';
+import TransactionHistory from './pages/TransactionHistory';
 import './index.css';
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
             <Route path="/conversion" element={<Conversion />} />
             <Route path="/confirm" element={<ConfirmTransfer />} />
             <Route path="/status" element={<TransactionStatus />} />
+            <Route path="/history" element={<TransactionHistory />} />
           </Routes>
         </main>
         <Toaster

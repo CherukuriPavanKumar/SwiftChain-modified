@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Wallet, Zap, TrendingUp } from 'lucide-react';
+import { Wallet, Zap, TrendingUp, History } from 'lucide-react';
 
 const Header = () => {
   const location = useLocation();
@@ -9,6 +9,7 @@ const Header = () => {
     { path: '/', label: 'Send Money', icon: Wallet },
     { path: '/conversion', label: 'Conversion', icon: TrendingUp },
     { path: '/confirm', label: 'Confirm', icon: Zap },
+    { path: '/history', label: 'History', icon: History },
   ];
 
   return (
