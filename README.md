@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🚀 SwiftChain - International Money Transfer Using Crypto
 
 A full-stack web application for international money transfers using cryptocurrency to reduce fees. Built with React, Node.js, and blockchain technology.
@@ -198,3 +199,6 @@ If you encounter any issues or have questions:
 ---
 
 **Built with ❤️ for the Web3 community** 
+=======
+# SwiftChain
+>>>>>>> 7443bce781e52508aceb82e9b9ed30394823d8b9
