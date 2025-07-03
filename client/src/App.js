@@ -12,9 +12,9 @@ import './index.css';
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen bg-gray-900">
         <Header />
-        <main className="container mx-auto px-4 py-8">
+        <main>
           <Routes>
             <Route path="/" element={<SendMoney />} />
             <Route path="/conversion" element={<Conversion />} />
@@ -28,21 +28,22 @@ function App() {
           toastOptions={{
             duration: 4000,
             style: {
-              background: '#363636',
-              color: '#fff',
+              background: '#1f2937',
+              color: '#f9fafb',
+              border: '1px solid #374151',
             },
             success: {
               duration: 3000,
               iconTheme: {
-                primary: '#22c55e',
-                secondary: '#fff',
+                primary: '#10b981',
+                secondary: '#f9fafb',
               },
             },
             error: {
               duration: 5000,
               iconTheme: {
                 primary: '#ef4444',
-                secondary: '#fff',
+                secondary: '#f9fafb',
               },
             },
           }}
@@ -52,4 +53,4 @@ function App() {
   );
 }
 
-export default App; 
+export default App;
