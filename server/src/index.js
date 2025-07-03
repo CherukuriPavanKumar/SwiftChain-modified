@@ -13,6 +13,8 @@ const PORT = process.env.PORT || 5000;
 // CORS configuration for deployment
 const allowedOrigins = [
   'http://localhost:3000',
+  'http://localhost:3001',
+  'http://localhost:5173',
   'https://swiftchain.vercel.app',
   'https://swiftchain-client.vercel.app',
   'https://swiftchain.netlify.app',
@@ -43,6 +45,12 @@ app.use(cors({
     
     // Allow Netlify deployments
     if (origin.includes('.netlify.app')) {
+      return callback(null, true);
+    }
+    
+    // In development mode, be more permissive
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Development mode: allowing origin:', origin);
       return callback(null, true);
     }
     
@@ -85,4 +93,6 @@ app.use('*', (req, res) => {
 app.listen(PORT, () => {
   console.log(`🚀 SwiftChain Server running on port ${PORT}`);
   console.log(`📊 Health check: http://localhost:${PORT}/api/health`);
+  console.log(`🌍 Environment: ${process.env.NODE_ENV || 'development'}`);
+  console.log(`🔗 Allowed origins:`, allowedOrigins);
 });
