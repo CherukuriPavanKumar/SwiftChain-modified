@@ -1,0 +1,14 @@
+{
+  "name": "swiftchain-preview",
+  "version": "1.0.0",
+  "description": "SwiftChain - International money transfer using crypto",
+  "scripts": {
+    "install-all": "cd server && npm install && cd ../client && npm install",
+    "start-backend": "cd server && npm start",
+    "start-frontend": "cd client && npm start",
+    "dev": "concurrently \"npm run start-backend\" \"npm run start-frontend\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
